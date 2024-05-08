@@ -1,0 +1,23 @@
+.signature-stats {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+  }
+  
+  .stat {
+    margin: 20px;
+    text-align: center;
+  }
+  
+  .big-number {
+    font-size: 48px;
+    font-weight: bold;
+  }
+  
+  .stat-label {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  

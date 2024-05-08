@@ -9,8 +9,8 @@ img_height, img_width = 128, 128
 batch_size = 32
 
 # Define the directory containing the images
-train_dir = '/Users/swarnabh./Documents/sign/signatures'
-validation_dir = '/Users/swarnabh./Documents/sign/validation/sample_Signature'
+train_dir = '/Users/swarnabh./Documents/archive-2/Dataset_Signature_Final/Dataset/dataset4'
+validation_dir = '/Users/swarnabh./Documents/archive-2/Dataset_Signature_Final/Dataset/dataset1'
 
 # Create data generators with augmentation for training and validation
 train_datagen = ImageDataGenerator(
@@ -75,10 +75,24 @@ history = model.fit(
     validation_steps=validation_generator.samples // batch_size
 )
 
-# Evaluate the model
-test_loss, test_accuracy = model.evaluate(validation_generator)
-print("Test Loss:", test_loss)
-print("Test Accuracy:", test_accuracy)
+# Print accuracy
+print("Training Accuracy:", history.history['accuracy'][-1])
+print("Validation Accuracy:", history.history['val_accuracy'][-1])
+
+# Plot accuracy and loss
+plt.plot(history.history['accuracy'], label='Training Accuracy')
+plt.plot(history.history['val_accuracy'], label='Validation Accuracy')
+plt.xlabel('Epoch')
+plt.ylabel('Accuracy')
+plt.legend()
+plt.show()
+
+plt.plot(history.history['loss'], label='Training Loss')
+plt.plot(history.history['val_loss'], label='Validation Loss')
+plt.xlabel('Epoch')
+plt.ylabel('Loss')
+plt.legend()
+plt.show()
 
 # Save the model to a specific directory
 save_path = '/Users/swarnabh./Documents/sign/model /signature_verification_model.h5'

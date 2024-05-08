@@ -1,18 +1,49 @@
 /* App.css */
 
+/* Background image */
+body {
+  background-image: url('/Users/swarnabh./Desktop/signature-verification-app/public/6940220.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Header animation */
+@keyframes headerAnimation {
+  0% { transform: translateY(-10px); }
+  50% { transform: translateY(10px); }
+  100% { transform: translateY(-10px); }
+}
+
+.header-top {
+  animation: headerAnimation 3s infinite;
+}
+
+/* Signature image animation */
+@keyframes signatureAnimation {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(10deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.signatureImage {
+  animation: signatureAnimation 5s infinite;
+}
+
 .App {
   text-align: center;
   padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
 }
 
@@ -41,8 +72,38 @@ button:hover {
   background-color: #00aaff;
 }
 
-.result {
+.error {
+  color: red;
   margin-top: 20px;
+}
+
+.resultText {
   font-size: 18px;
   font-weight: bold;
+  margin-top: 20px;
+}
+
+.loadingText {
+  font-size: 18px;
+  font-style: italic;
+  margin-top: 20px;
+}
+
+.uploadedImage {
+  max-width: 100%;
+  max-height: 400px;
+}
+
+.description {
+  margin: 20px auto;
+  max-width: 800px;
+  text-align: left;
+  padding: 0 20px;
+  overflow-y: auto;
+}
+
+footer {
+  background-color: #282c34;
+  color: white;
+  padding: 20px;
 }

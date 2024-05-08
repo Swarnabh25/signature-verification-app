@@ -1,0 +1,47 @@
+.customer-reviews {
+    margin-top: 20px;
+  }
+  
+  .review {
+    margin-bottom: 20px;
+  }
+  
+  .rating {
+    font-size: 24px;
+  }
+  
+  .star {
+    color: gold;
+  }
+  
+  .add-review {
+    margin-top: 40px;
+  }
+  
+  .add-review form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .add-review input,
+  .add-review select,
+  .add-review textarea,
+  .add-review button {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .add-review button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .add-review button:hover {
+    background-color: #0056b3;
+  }
+  
