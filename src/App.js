@@ -76,7 +76,7 @@ function App() {
 
       </header>
       <footer>
-        <p className="credit">Created by Swarnabh Gajbhiye and Tamishk Naik</p>
+        <p className="credit">Created by @Swarnabh </p>
       </footer>
     </div>
   );
